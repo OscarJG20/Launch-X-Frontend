@@ -1,0 +1,759 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --color-base: #ffffff;
+    --color-azul: #2C4CCE;
+    --color-claro: #E7F3F2;
+    --color-gris: #6D7B93;
+    --color-azul-f: #1F3E72;
+    --color-amarillo: #FFD012;
+    --color-amarrillo-c: #fff6d1;
+    --color-complemento: #EAF1FE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Navbar */
+.header {
+    width: 100%;
+    min-height: 110px;
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    flex-wrap: wrap;
+    top: 0px;
+    z-index: 107;
+    background-color: var(--color-base);
+}
+
+.header::before {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    content: "";
+    z-index: 100;
+    background-color: var(--color-claro);
+    width: 50vw;
+    height: 100%;
+}
+
+.header_logo {
+    position: relative;
+    color: var(--color-azul);
+    font-weight: 700;
+    font-size: 1.8rem;
+    z-index: 101;
+}
+
+.header_menu {
+    z-index: 101;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 5vw;
+    padding: 15px 20px;
+}
+
+.menu_item {
+    color: var(--color-gris);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.menu_boton {
+    background-color: var(--color-azul);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: var(--color-base);
+    white-space: nowrap;
+    text-decoration: none;
+    transition: background-color, color .5s ease;
+    cursor: pointer;
+}
+
+/* Comienza el contenido de la página */
+section {
+    margin-bottom: 80px;
+}
+
+
+.section_portada {
+    display: flex;
+    width: 100%;
+}
+
+/* Para la descripción de portada */
+.portada_descripcion {
+    display: flex;
+    flex-direction: column;
+    padding: 3% 8%;
+    position: relative;
+    align-items: center;
+}
+
+.descripcion_titulo {
+    width: 85%;
+    color: var(--color-azul-f);
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+
+.descripcion_parrafo {
+    font-size: 1.1rem;
+    width: 85%;
+    margin: 20px 0;
+    color: var(--color-gris);
+    letter-spacing: .8px;
+}
+
+
+.descripcion_detalles {
+    margin-top: 30px;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-azul-f);
+    font-weight: 600;
+}
+
+.descripcion_detalles i {
+    color: var(--color-amarillo);
+    padding: 5px;
+    background-color: var(--color-amarrillo-c);
+    border-radius: 5px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, rgba(255, 253, 139, 0.733));
+}
+
+/* Para la imagen de portada */
+.portada_imagen {
+    display: flex;
+    justify-content: flex-end;
+    text-align: end;
+    position: relative;
+}
+
+.imagen_contenedor {
+    height: 75vh;
+    max-height: 600px;
+    width: 50vw;
+    overflow: hidden;
+}
+
+.imagen_contenedor img {
+    position: relative;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 101;
+}
+
+/* Para la card de elegir cita */
+.portada_cita {
+    position: absolute;
+    left: -39.5vw;
+    bottom: 30px;
+}
+
+.cita_label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cita_label i,
+.elegir_icono i,
+.clasificar_card i,
+.desplegar .fa-shield-cat,
+.desplegar .fa-sort-down {
+    color: var(--color-azul);
+    font-size: .8rem;
+    padding: 5px;
+    background-color: var(--color-complemento);
+    border-radius: 5px;
+}
+
+.cita_label span {
+    color: var(--color-azul-f);
+    font-weight: 700;
+}
+
+
+.elegir_label p {
+    color: var(--color-gris);
+}
+
+.elegir_respuesta span {
+    color: var(--color-azul-f);
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+
+
+.cita_elegir {
+    margin-top: 25px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 15px 30px -3px rgba(58, 108, 196, 0.25);
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(5px);
+    min-width: 60vw;
+    z-index: 104;
+    padding: 30px 0;
+    border-radius: 5px;
+}
+
+.cita_crear {
+    border: 0;
+    padding: 15px 0;
+    background-color: var(--color-azul);
+    color: var(--color-base);
+    box-shadow: 0px 10px 20px -3px rgba(58, 108, 196, 0.65);
+    min-width: 150px;
+    max-width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color .5s ease;
+}
+
+.cita_crear:hover,
+.menu_boton:hover {
+    background-color: var(--color-azul-f);
+    color: var(--color-base);
+}
+
+
+.elegir_lugar {
+    display: grid;
+    grid-template-columns: .3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "elegir_icono elegir_label"
+        ". elegir_respuesta";
+}
+
+.elegir_icono {
+    grid-area: elegir_icono;
+}
+
+.elegir_label {
+    grid-area: elegir_label;
+}
+
+.elegir_respuesta {
+    grid-area: elegir_respuesta;
+}
+
+
+.elegir_icono {
+    justify-self: center;
+    align-self: center;
+    grid-area: elegir_icono;
+}
+
+.elegir_label {
+    justify-self: flex-start;
+    align-self: center;
+    grid-area: elegir_label;
+}
+
+.elegir_respuesta {
+    justify-self: flex-start;
+    align-self: flex-start;
+    grid-area: elegir_respuesta;
+}
+
+
+/* Empresas con vacunas */
+.section_marca {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    padding: 0 5%;
+}
+
+.marca_vacunas {
+    width: 50%;
+}
+
+/* Sección de por qué vacunarse */
+.section_porque {
+    width: 100%;
+    padding: 4% 8%;
+}
+
+.porque_titulo {
+    font-size: 2.2rem;
+    color: var(--color-azul-f);
+    font-weight: 800;
+}
+
+.porque_descripcion,
+.card_datos {
+    width: 50%;
+    color: var(--color-gris);
+    font-size: 1.1rem;
+    margin: 30px 0;
+
+}
+
+.porque_clasificar {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.clasificar_card {
+    width: 230px;
+    padding: 25px;
+    box-shadow: 0px 0px 2px 1px rgba(160, 160, 160, 0.25);
+    transition: box-shadow .4s;
+}
+
+.clasificar_card:hover {
+    box-shadow: 0px 15px 30px -3px rgba(58, 108, 196, 0.25);
+}
+
+.clasificar_card i,
+.desplegar .fa-shield-cat {
+    font-size: 1.1rem;
+    padding: 12px;
+}
+
+.clasificar_card h4 {
+    color: var(--color-azul-f);
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+.clasificar_card p {
+    color: var(--color-gris);
+    font-size: 1rem;
+}
+
+
+/* Sección de indicaciones */
+.section_indicaciones {
+    width: 100%;
+    display: flex;
+    gap: 60px;
+}
+
+.indicaciones_img {
+    width: 50vw;
+    max-height: 750px;
+    overflow: hidden;
+}
+
+.indicaciones_desplegar {
+    width: 100%;
+}
+
+.indicaciones {
+    width: 100%;
+    min-height: 565px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.bloque_indicaciones {
+    width: 50%;
+}
+
+.pq_descripcion--modificado {
+    width: 85%;
+}
+
+.desplegar_padre {
+    width: 85%;
+    padding: 15px 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow .5s;
+}
+
+.desplegar {
+    display: grid;
+    grid-template-columns: .5fr 2fr 1.5fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    align-content: center;
+    justify-items: end;
+    align-items: center;
+    grid-template-areas:
+        "fa-shield-cat QA fa-sort-down";
+}
+
+.desplegar_padre:hover {
+    box-shadow: 0px 15px 30px -3px rgba(58, 108, 196, 0.25);
+}
+
+/* Permite editar atributos del elemento padre en base a estados de elementos hijos */
+.desplegar_padre:has(> .desplegar_contenido.activa) {
+    box-shadow: 0px 15px 30px -3px rgba(58, 108, 196, 0.25);
+}
+
+.desplegar_contenido {
+    display: none;
+    padding: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: var(--color-gris);
+}
+
+@keyframes desplegar {
+    from {
+        transform: scaleY(0);
+    }
+}
+
+.activa {
+    display: block;
+    animation: 300ms ease desplegar 1;
+}
+
+.fa-shield-cat {
+    justify-self: start;
+    align-self: center;
+    grid-area: fa-shield-cat;
+}
+
+.QA {
+    justify-self: start;
+    align-self: center;
+    grid-area: QA;
+    margin-left: 20px;
+    color: var(--color-azul-f);
+    font-weight: 700;
+}
+
+.fa-sort-down {
+    grid-area: fa-sort-down;
+}
+
+
+
+/* Área de contacto */
+.bloque_contacto {
+    width: 50%;
+    margin-left: 8%;
+}
+
+.contacto_bloque {}
+
+.clasificar_card:has(> .card_info) {
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_info {
+    display: grid;
+    grid-template-columns: 0.6fr 1.4fr;
+    grid-template-rows: .5fr .5fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-content: center;
+    justify-items: center;
+    grid-template-areas:
+        "card_icono card_accion"
+        "card_icono card_datos";
+}
+
+.card_icono {
+    grid-area: card_icono;
+}
+
+.card_icono i {
+    padding: 15px 15px;
+    margin-right: 10px;
+}
+
+.card_accion {
+    justify-self: start;
+    align-self: end;
+    grid-area: card_accion;
+    margin-bottom: 5px;
+}
+
+.card_datos {
+    justify-self: start;
+    align-self: start;
+    grid-area: card_datos;
+    margin-top: 5px;
+    width: 100%;
+    font-size: .9rem;
+
+}
+
+.card_accion h4 {
+    margin: 0;
+    font-weight: 600;
+    color: var(--color-azul-f);
+}
+
+.menu_boton--modificado {
+    border: 0;
+    width: 90%;
+    font-weight: 700;
+}
+
+.btn--color {
+    background-color: var(--color-complemento);
+    border: 0;
+    width: 90%;
+    color: var(--color-azul);
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+
+
+/* Área del footer */
+.footer {
+    margin-top: 150px;
+    background-color: var(--color-complemento);
+    width: 100%;
+    height: 70%;
+    min-height: 350px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.footer_50 {
+    min-width: 45%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer_50 .footer_titulo {
+    color: var(--color-azul);
+    font-weight: 800;
+    font-size: 1.7rem;
+}
+
+.footer_50 .footer_parrafo {
+    color: var(--color-gris);
+    max-width: 300px;
+}
+
+.footer_50--tamano {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+
+.footer_1-3 {
+    min-width: 33%;
+    padding: 10px;
+}
+
+.footer_1-3 h4 {
+    color: var(--color-azul-f);
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.footer_1-3 ul {
+    margin-top: 10px;
+    list-style: none;
+}
+
+.footer_1-3 ul li {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.footer_1-3 ul li a {
+    text-decoration: none;
+    color: var(--color-gris);
+    font-weight: 500;
+    transition: color, font-weight .5s;
+}
+
+.footer_1-3 ul li a:hover,
+.footer_final a:hover {
+    color: var(--color-azul-f);
+    font-weight: 700;
+}
+
+.footer_final {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+.footer_final a {
+    color: var(--color-gris);
+    transition: color, font-weight .5s;
+}
+
+
+/* Área de mediaqueries */
+@media (max-width:800px) {
+    .section_portada {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .portada_descripcion {
+        align-items: center;
+    }
+
+    .imagen_contenedor {
+        width: 100vw;
+        height: 40vh;
+    }
+
+    .descripcion_titulo,
+    .descripcion_parrafo,
+    .porque_titulo,
+    .porque_descripcion {
+        text-align: center;
+    }
+
+    .descripcion_titulo,
+    .descripcion_parrafo,
+    .descripcion_detalles {
+        width: 100%;
+    }
+
+    .descripcion_detalles span {
+        text-align: center;
+    }
+
+    .portada_imagen {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: initial;
+    }
+
+    .porque_clasificar {
+        justify-content: center;
+    }
+
+    .clasificar_card {
+        width: 100%;
+    }
+
+    .section_indicaciones {
+        flex-wrap: wrap;
+    }
+
+    .indicaciones_img {
+        width: 100vw;
+        height: 40vh;
+    }
+
+    .indicaciones {
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .bloque_indicaciones {
+        width: 100%;
+        padding: 8%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .indicaciones_desplegar {
+        margin: auto;
+    }
+
+    .desplegar_padre {
+        width: 100%;
+    }
+
+    .bloque_contacto {
+        width: 100%;
+        margin-left: 0vw;
+        padding: 8%;
+    }
+
+    .bloque_contacto~.indicaciones_img {
+        height: 550px;
+    }
+}
+
+
+
+
+@media (max-width:1170px) {
+    .section_portada {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .portada_cita {
+        position: initial;
+        margin-top: 40px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .cita_elegir {
+        position: initial;
+        flex-wrap: wrap;
+        max-width: 90%;
+        gap: 20px;
+    }
+
+    .section_marca {
+        width: 100%;
+        height: inherit;
+        align-items: center;
+        padding: 0 5%;
+    }
+
+    .marca_vacunas {
+        min-width: 80%;
+    }
+
+    .porque_descripcion {
+        width: 100%;
+    }
+
+    .bloque_contacto>.porque_clasificar {
+        justify-content: center;
+    }
+}

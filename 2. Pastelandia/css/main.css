@@ -1,0 +1,683 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;600;700&display=swap');
+
+:root {
+    /* También para texto */
+    --color-rojo: #9D0000;
+    --color-rojo-65: rgba(157, 0, 0, 0.65);
+    /* También para texto */
+    --color-rosa: #FFD9DD;
+    --color-rojon-50: rgba(53, 0, 0, 0.5);
+    --color-verde: #A7D9BA;
+    --color-verde-50: rgba(167, 217, 186, 0.5);
+    ;
+    --color-blanco: #FFFFFF;
+
+    /* ======================== */
+    --color-texto: #393939;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+}
+
+
+
+/* Navbar */
+.header {
+    width: 100%;
+    background-color: var(--color-rojo);
+    height: 101px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+}
+
+.header_logo {
+    height: 93px;
+    position: relative;
+    z-index: 12;
+}
+
+.header_boton {
+    background-color: transparent;
+    border: 0;
+}
+
+.boton_barras {
+    font-size: 42px;
+    color: var(--color-rosa);
+    cursor: pointer;
+    position: relative;
+    z-index: 12;
+    transition: color .6s;
+}
+
+.boton_barras:hover {
+    color: var(--color-verde);
+}
+
+.header_nav {
+    background-color: var(--color-rojo);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .5s ease;
+    z-index: 11;
+}
+
+.sin-scroll {
+    overflow-y: hidden;
+}
+
+.nav {
+    text-align: right;
+    padding: 100px 50px 0px 0px;
+}
+
+.nav li {
+    padding-top: 50px;
+    color: var(--color-blanco);
+
+}
+
+.nav li a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--color-blanco);
+    border-radius: 15px;
+    transition: color, background-color .5s ease-in;
+    padding: 10px 15px;
+
+}
+
+.nav li a:hover {
+    color: var(--color-rojo);
+    background-color: var(--color-rosa);
+}
+
+/* Parte del menú, pero para mostrar y ocultarlo con js */
+.active {
+    transform: translate(-100vw);
+}
+
+
+
+
+
+/* Contenido */
+.main_section {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.section_transparencia {
+    width: 100%;
+    min-height: 240px;
+    background-position: center;
+    background-size: cover;
+    background-image: url(/img/Día\ de\ muertos.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    background-attachment: fixed;
+}
+
+.section_transparencia::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-rojon-50);
+    z-index: -1;
+}
+
+
+.portada_titulo {
+    background-color: var(--color-rojo-65);
+    height: 99px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.titulo {
+    color: var(--color-blanco);
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.portada_img {
+    width: 68px;
+    object-fit: cover;
+    animation: animacion_pan 10s ease 0s infinite normal forwards;
+}
+
+@keyframes animacion_pan {
+
+    0%,
+    100% {
+        transform: translateX(0%);
+        transform-origin: 50% 50%;
+    }
+
+    15% {
+        transform: translateX(-30px) rotate(-6deg);
+    }
+
+    30% {
+        transform: translateX(15px) rotate(6deg);
+    }
+
+    45% {
+        transform: translateX(-15px) rotate(-3.6deg);
+    }
+
+    60% {
+        transform: translateX(9px) rotate(2.4deg);
+    }
+
+    75% {
+        transform: translateX(-6px) rotate(-1.2deg);
+    }
+}
+
+.portada_boton {
+    min-height: 35px;
+    min-width: 158px;
+    border-radius: 5px;
+    background-color: var(--color-rojo);
+    color: var(--color-blanco);
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color, background-color 1s;
+    text-decoration: none;
+}
+
+.portada_boton:hover {
+    background-color: var(--color-rosa);
+    color: var(--color-rojo);
+}
+
+.boton_icono {
+    margin-left: 5px;
+}
+
+
+/* Se necesita para poder sobreponer en la clase .section_transparencia */
+.especial {
+    position: relative;
+}
+
+.section_portada {
+    position: absolute;
+    top: 43;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+/* Creamos la grid */
+.section_portada {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "portada_titulo portada_titulo"
+        "portada_img portada_boton";
+}
+
+.portada_titulo {
+    justify-self: center;
+    align-self: center;
+    grid-area: portada_titulo;
+}
+
+.portada_img {
+    justify-self: center;
+    align-self: center;
+    grid-area: portada_img;
+}
+
+.portada_boton {
+    justify-self: left;
+    align-self: center;
+    grid-area: portada_boton;
+    margin-left: -35px;
+    cursor: pointer;
+}
+
+
+/*=============== Para decoraciones y sabores ===============*/
+.section_titulo {
+    text-align: center;
+    color: var(--color-rojo);
+    width: 70%;
+    font-weight: 600;
+}
+
+
+.section_cards {
+    margin: 20px 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    min-height: 162px;
+    min-width: 140px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: -3px 4px 8px 0px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    transition: box-shadow, transform 1s;
+    cursor: pointer;
+    background-color: var(--color-rojo);
+}
+
+.card:hover {
+    box-shadow: -3px 4px 8px 0px rgba(202, 16, 16, 0.75);
+    transform: scale(1.2);
+}
+
+.card_img {
+    max-height: 162px;
+}
+
+.card_img img {
+    width: 100%;
+    height: 121px;
+    object-fit: cover;
+}
+
+.card_texto {
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.texto {
+    font-weight: 700;
+    color: var(--color-blanco);
+    width: 90%;
+}
+
+
+/* Para páginas secundarias rojo */
+.section_titulo-r {
+    width: 85%;
+    margin-top: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    background-color: var(--color-rojo);
+    color: var(--color-rosa);
+    padding: 6px 0;
+    border-radius: 15px;
+}
+
+.cards--modificadas {
+    gap: 3vw;
+}
+
+.card_rectangular {
+    min-height: 130px;
+    min-width: 299px;
+    background-color: var(--color-rosa);
+    display: flex;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+
+.rectangular_img img {
+    width: 98px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+.card_contenido {
+    width: 201px;
+    padding: 10px;
+    color: var(--color-texto);
+}
+
+
+
+/* Para páginas secundarias verde */
+.section_titulo-v {
+    width: 85%;
+    margin-top: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    background-color: var(--color-verde);
+    color: var(--color-texto);
+    padding: 6px 0;
+    border-radius: 15px;
+}
+
+
+.card_rectangular-v {
+    min-height: 130px;
+    min-width: 299px;
+    background-color: var(--color-verde-50);
+    display: flex;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+
+.btn_pedido {
+    color: var(--color-rojo);
+    font-weight: 700;
+    position: fixed;
+    top: 433px;
+    right: 15px;
+}
+
+.btn_pedido i {
+    color: var(--color-rojo);
+    font-size: 45px;
+}
+
+
+/*=============== Para hacer pedidos ===============*/
+.section_formulario {
+    margin-top: 12px;
+    display: grid;
+    justify-items: center;
+    border: 1px solid green;
+    padding: 3vw 0;
+    border-radius: 15px;
+    background: var(--fa-font-regular);
+    box-shadow: 1px 1px 25px rgba(28, 117, 16, 0.5);
+    ;
+}
+
+.formulario_grupo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+    align-items: flex-start
+}
+
+.grupo_label {
+    font-weight: 600;
+    color: var(--color-rojo);
+}
+
+.grupo_input {
+    background: #FFFFFF;
+    border: 1px solid var(--color-rosa);
+    box-shadow: -1px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    width: 285px;
+    height: 34px;
+    padding-left: 10px;
+    font-size: 1rem;
+}
+
+.grupo_input:focus {
+    outline: 1px solid var(--color-rojo);
+}
+
+/* Galeria de cards */
+.card_rectangular-flechas {
+    display: flex;
+    align-items: center;
+}
+
+.flecha {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.flecha .fa-angles-left,
+.flecha .fa-angles-right {
+    color: var(--color-rojo);
+    font-size: 25px;
+}
+
+.label--modificado {
+    margin-left: 25px;
+}
+
+.card--modificado {
+    position: relative;
+}
+
+.flecha .fa-circle-plus {
+    position: absolute;
+    top: 120px;
+    left: 160px;
+    font-size: 30px;
+    color: var(--color-rojo);
+}
+
+.fa-trash-can {
+    color: var(--color-rojo);
+}
+
+.lista {
+    margin-left: 15px;
+    list-style-type: circle;
+}
+
+.formulario_lista {
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulario_lista span {
+    color: var(--color-texto);
+}
+
+.formulario_lista button {
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.formulario_boton {
+    margin-top: 51px;
+    min-width: 276px;
+    min-height: 42px;
+    background-color: var(--color-rojo);
+    border: 0;
+    font-weight: 600;
+    color: var(--color-blanco);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+
+.formulario_boton:hover {
+    background-color: var(--color-rosa);
+    color: var(--color-rojo);
+    border: 1px solid var(--color-rojo);
+}
+
+
+/* Página nosotros */
+
+.section_parrafo {
+    color: var(--color-texto);
+    width: 80%;
+    margin-top: 18px;
+}
+
+.section_direccion {
+    color: var(--color-rojo);
+}
+
+.table_responsiva {
+    padding: 5px;
+    width: 90%;
+}
+
+.table_responsiva th,
+.nombre_pedido {
+    padding: 5px;
+    color: var(--color-rojo);
+    font-weight: 700;
+}
+
+.table_responsiva th:first-child {
+    text-align: left;
+}
+
+.table_responsiva td {
+    padding: 5px;
+    text-align: center;
+    ;
+}
+
+.table_responsiva td:first-child {
+    color: var(--color-rojo);
+    font-weight: 700;
+    text-align: left;
+}
+
+
+
+
+/* Apartado de administradores */
+.administrador {
+    display: none;
+}
+
+.section_contenedor {
+    background-color: var(--color-rosa);
+    border: 1px solid var(--color-rojo);
+    margin-top: 18px;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+}
+
+.nombre_pedido {
+    margin-top: 14px;
+    text-decoration: underline;
+}
+
+.table_responsiva-admin {
+    padding: 5px;
+    width: 90%;
+}
+
+.table_responsiva-admin td {
+    padding: 5px;
+    text-align: left;
+    color: var(--color-texto);
+
+}
+
+.table_responsiva-admin td:first-child {
+    font-weight: 700;
+    text-align: left;
+}
+
+
+
+
+/* Área de mediaqueries */
+@media (min-width:560px) {
+    .section_formulario {
+        padding: 3vw 5vw;
+    }
+
+    .card {
+        min-height: 202px;
+        min-width: 230px;
+        margin: 15px;
+    }
+
+    .card_img {
+        max-height: 162px;
+    }
+
+    .card_img img {
+        height: 162px;
+    }
+
+    /* cards rectangulares */
+    .card_rectangular {
+        min-height: 130px;
+        min-width: 400px;
+    }
+
+
+    .card_rectangular-v {
+        min-height: 130px;
+        min-width: 400px;
+    }
+
+    .rectangular_img img {
+        width: 165px;
+    }
+
+
+    /* Portada - cliente */
+    .section_transparencia {
+        min-height: 50vh;
+    }
+
+    .section_portada {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        gap: 20px;
+    }
+
+    .portada_titulo {
+        min-height: 150px;
+        width: 50vw;
+    }
+
+    .portada_boton {
+        justify-self: center;
+        font-size: 1.2rem;
+        padding: 0 20px;
+        margin-left: 0;
+    }
+
+
+    /* Admin */
+    .administrador {
+        display: initial;
+        color: var(--color-rosa);
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+}

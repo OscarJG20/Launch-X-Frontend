@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastelandia</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#!"> <img src="/img/Pastelandia.png" class="header_logo" alt="Pastelandia">
+        </a>
+
+        <button class="header_boton" id="btnMenu">
+            <i class="fa-solid fa-bars boton_barras"></i>
+        </button>
+
+        <nav class="header_nav active">
+            <ul class="nav">
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/templates/sabores-y-decoraciones.html">Sabores y decoraciones</a></li>
+                <li><a href="/templates/pedir-pastel.html">Pedir pastel</a></li>
+                <li><a href="/templates/nosotros.html">Nosotros</a></li>
+                <li><a href="/templates/admin-inicio.html">Administrador</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="main_section">
+            <h1 class="section_titulo-r">Crea tu pastel especial</h1>
+
+            <form class="section_formulario">
+                <div class="formulario_grupo">
+                    <label class="grupo_label" for="nombre_completo">Nombre completo</label>
+                    <input class="grupo_input" type="text" id="nombre_completo" name="nombre_completo">
+                </div>
+
+                <div class="formulario_grupo">
+                    <label class="grupo_label" for="telefono">Teléfono</label>
+                    <input class="grupo_input" type="text" id="telefono" name="telefono">
+                </div>
+
+                <div class="formulario_grupo">
+                    <label class="grupo_label" for="email">Correo electrónico</label>
+                    <input class="grupo_input" type="email" id="email" name="email">
+                </div>
+
+                <div class="formulario_grupo">
+                    <label class="grupo_label label--modificado" for="email">Selecciona tus sabores</label>
+                    <div class="card_rectangular-flechas">
+                        <button class="flecha">
+                            <i class="fa-solid fa-angles-left"></i>
+                        </button>
+
+                        <div class="card_rectangular">
+                            <div class="rectangular_img">
+                                <img src="/img/sabor canela.jpg" alt="Sabor canela">
+                            </div>
+
+                            <div class="card_contenido card--modificado">
+                                <p>
+                                    <strong>Producto: </strong>Canela <br>
+                                    <strong>Descripción: </strong>Se caracteriza por poseer forma de ramas secas con un
+                                    sabor intenso entre dulce y amargo. <br>
+                                    <strong>Precio: </strong>$1,643 MXN
+
+                                    <button href="#!" class="flecha">
+                                        <i class="fa-solid fa-circle-plus"></i>
+                                    </button>
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <button class="flecha">
+                            <i class="fa-solid fa-angles-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="formulario_grupo">
+                    <span class="grupo_label" for="email">Sabores seleccionados</span>
+                    <ul class="lista">
+                        <li class="formulario_lista">
+                            <span>• Frambuesa</span>
+                            <button> <i class="fa-solid fa-trash-can"></i></button>
+                        </li>
+                        <li class="formulario_lista">
+                            <span>• Manzana</span>
+                            <button> <i class="fa-solid fa-trash-can"></i></button>
+                        </li>
+                        <li class="formulario_lista">
+                            <span>• Pera</span>
+                            <button> <i class="fa-solid fa-trash-can"></i></button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="formulario_grupo">
+                    <label class="grupo_label label--modificado" for="email">Selecciona tus decoraciones</label>
+                    <div class="card_rectangular-flechas">
+                        <button class="flecha">
+                            <i class="fa-solid fa-angles-left"></i>
+                        </button>
+
+                        <div class="card_rectangular-v">
+                            <div class="rectangular_img">
+                                <img src="/img/sabor canela.jpg" alt="Sabor canela">
+                            </div>
+
+                            <div class="card_contenido card--modificado">
+                                <p>
+                                    <strong>Producto: </strong>Canela <br>
+                                    <strong>Descripción: </strong>Se caracteriza por poseer forma de ramas secas con un
+                                    sabor intenso entre dulce y amargo. <br>
+                                    <strong>Precio: </strong>$1,643 MXN
+
+                                    <button href="#!" class="flecha">
+                                        <i class="fa-solid fa-circle-plus"></i>
+                                    </button>
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <button class="flecha">
+                            <i class="fa-solid fa-angles-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="formulario_grupo">
+                    <span class="grupo_label" for="email">Decoraciones seleccionados</span>
+                    <ul class="lista">
+                        <li class="formulario_lista">
+                            <span>• Bob esponja</span>
+                            <button> <i class="fa-solid fa-trash-can"></i></button>
+                        </li>
+                        <li class="formulario_lista">
+                            <span>• Cheems</span>
+                            <button> <i class="fa-solid fa-trash-can"></i></button>
+                        </li>
+                        <li class="formulario_lista">
+                            <span>• Tilin</span>
+                            <button> <i class="fa-solid fa-trash-can"></i></button>
+                        </li>
+                    </ul>
+                </div>
+
+                <button class="formulario_boton" type="submit">Hacer pedido</button>
+            </form>
+
+        </section>
+
+    </main>
+
+    <script src="/js/menu.js"></script>
+</body>
+
+</html>
