@@ -3,7 +3,7 @@
 ## ✨Prácticas ✨
 
 A continuación se presentan las prácticas realizadas en el curso:
-- **[Abogabot](./1.%20Abogabot/requerimientos.md) - Requerimientos del proyecto**
+- **Abogabot - [Requerimientos del proyecto](./1.%20Abogabot/requerimientos.md)**
 - **Pastelandia**
   * [Mockups](./2.%20Pastelandia/Pasteler%C3%ADa.pdf)
   * [Repositorio](./2.%20Pastelandia/)
