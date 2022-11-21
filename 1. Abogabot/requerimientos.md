@@ -3,7 +3,7 @@
 
 ---
 ## 1. Descripción de la solicitud
-
+as
 ### *Usuario solicitante*
 
 Debido al avance tecnológico y la tendencia por la digitalización de los procesos. La empresa Abogados unidos S. A de C. V. Quiere brindar sus servicios de manera online mediante la implementación de un sitio web con nombre “Abogabot”, se busca que el trato con posibles clientes sea mediante la implementación de un formulario y que también pueda pagar por el servicio que desee. Por lo anterior se deberá contar con un inicio de sesión, ya que también entre sus opciones se busca que el cliente pueda ver el seguimiento de su solicitud, lo anterior desde la parte del cliente.
