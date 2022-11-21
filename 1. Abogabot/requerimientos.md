@@ -3,7 +3,7 @@
 
 ---
 ## 1. Descripción de la solicitud
-as
+
 ### *Usuario solicitante*
 
 Debido al avance tecnológico y la tendencia por la digitalización de los procesos. La empresa Abogados unidos S. A de C. V. Quiere brindar sus servicios de manera online mediante la implementación de un sitio web con nombre “Abogabot”, se busca que el trato con posibles clientes sea mediante la implementación de un formulario y que también pueda pagar por el servicio que desee. Por lo anterior se deberá contar con un inicio de sesión, ya que también entre sus opciones se busca que el cliente pueda ver el seguimiento de su solicitud, lo anterior desde la parte del cliente.
@@ -69,6 +69,7 @@ El alcance de la solución abarcará a todo México (por ahora), es decir, los c
 ## 7. Prototipo del proyecto
 - Cliente (Escritorio - Móvil)
 - Adminitrador (Escritorio)
+
 [Ver prototipos en Figma](https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FxMU3jMXnWE0BRekPkaxeLT%2FAbogabot%3Fnode-id%3D6%253A1017%26scaling%3Dscale-down%26page-id%3D0%253A1%26starting-point-node-id%3D2%253A12%26show-proto-sidebar%3D1)
 
 

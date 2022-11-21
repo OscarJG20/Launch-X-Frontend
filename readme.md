@@ -3,16 +3,14 @@
 ## ✨Prácticas ✨
 
 A continuación se presentan las prácticas realizadas en el curso:
-- **[Abogabot](https://nodejs.org/) - Requerimientos del proyecto**
+- **[Abogabot](./1.%20Abogabot/requerimientos.md) - Requerimientos del proyecto**
 - **Pastelandia**
   * [Mockups]
-  * [Repositorio]
+  * [Repositorio](./2.%20Pastelandia/)
   * [Sitio web en productivo]
 - **Vaccination**
-  * [Repositorio]
+  * [Repositorio](./3.%20Vaccination/)
   * [Sitio web en productivo]
 - **[Pokedex] - Consumo de la API de Pokemón**
-  * [Repositorio]
+  * [Repositorio](./4.%20Pokedex/)
   * [Sitio web en productivo]
-
-[dill]: <https://github.com/joemccann/dillinger>
