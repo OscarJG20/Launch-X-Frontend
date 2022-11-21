@@ -2,7 +2,7 @@
 ![Logo de la aplicación](./img/Abogabot%20logo.png#center)
 
 ---
-##<div style="text-align: center">1. Descripción de la solicitud</div>
+## <div style="text-align: center">1. Descripción de la solicitud</div>
 
 ### *Usuario solicitante*
 
@@ -27,7 +27,7 @@ La tipografía queda a disposición de los desarrolladores, pero en cuanto a otr
 - La preferencia de colores del cliente es azul marino y blanco, pero acepta propuestas.
 
 ---
-##<div style="text-align: center">2. ANALISIS DE REQUISITOS Y REQUERIMIENTOS </div>
+## <div style="text-align: center">2. ANALISIS DE REQUISITOS Y REQUERIMIENTOS </div>
 
 ### *Alcance de la solución*
 <div style="text-align: justify">
@@ -51,26 +51,26 @@ El alcance de la solución abarcará a todo México (por ahora), es decir, los c
 
 
 ---
-##<div style="text-align: center">3. Diagrama de planeación </div>
+## <div style="text-align: center">3. Diagrama de planeación </div>
 ![Fechas para las actividades del proyecto](./img/Hitos.PNG)
 
 **NOTA:** Las fechas de planeación establecidas en este documento son aproximadas y estarán sujetas a modificaciones que surjan por control de cambios u otros factores. 
 
 ---
-##<div style="text-align: center">4. Buyer persona </div>
+## <div style="text-align: center">4. Buyer persona </div>
 ![Perfil del usuario general](./img/buyer%20personas.PNG)
 
 ---
-##<div style="text-align: center">5. Audiencia </div>
+## <div style="text-align: center">5. Audiencia </div>
 
 <iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVPNUIFLw=/?moveToViewport=934,-163,3457,1055&embedId=663454855673" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 ---
-##<div style="text-align: center">6. Wireframe general</div>
+## <div style="text-align: center">6. Wireframe general</div>
 <iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVPNUb3LU=/?moveToViewport=-2123,-1472,13264,3559&embedId=857525961566" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 ---
-##<div style="text-align: center">7. Prototipo del proyecto </div>
+## <div style="text-align: center">7. Prototipo del proyecto </div>
 - Cliente (Escritorio - Móvil)
 - Adminitrador (Escritorio)
 <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FxMU3jMXnWE0BRekPkaxeLT%2FAbogabot%3Fnode-id%3D6%253A1017%26scaling%3Dscale-down%26page-id%3D0%253A1%26starting-point-node-id%3D2%253A12%26show-proto-sidebar%3D1" allowfullscreen></iframe>
